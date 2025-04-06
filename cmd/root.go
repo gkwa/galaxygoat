@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gkwa/galaxygoat/internal/processor"
+	"github.com/gkwa/galaxygoat"
 	"github.com/spf13/cobra"
 )
 
@@ -21,14 +21,8 @@ Examples:
   cat input.html | galaxygoat > output.html
   cat input.html | galaxygoat --remove="path,svg,script" > output.html`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		// Create processor with user-specified elements to remove
-		proc, err := processor.NewHTMLProcessor(elementsToRemove)
-		if err != nil {
-			return err
-		}
-
-		// Process HTML from stdin to stdout
-		return proc.ProcessHTML(os.Stdin, os.Stdout)
+		// Process HTML directly using the public API
+		return galaxygoat.RemoveElementsFromReader(os.Stdin, elementsToRemove, os.Stdout)
 	},
 }
 
