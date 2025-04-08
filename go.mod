@@ -4,7 +4,7 @@ go 1.23.4
 
 require (
 	github.com/spf13/cobra v1.9.1
-	golang.org/x/net v0.38.0
+	golang.org/x/net v0.39.0
 )
 
 require (
