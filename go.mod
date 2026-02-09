@@ -6,7 +6,7 @@ toolchain go1.25.7
 
 require (
 	github.com/spf13/cobra v1.10.2
-	golang.org/x/net v0.49.0
+	golang.org/x/net v0.50.0
 )
 
 require (
