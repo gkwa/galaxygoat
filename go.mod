@@ -1,12 +1,12 @@
 module github.com/gkwa/galaxygoat
 
-go 1.25.0
+go 1.26.0
 
 toolchain go1.27.1
 
 require (
 	github.com/spf13/cobra v1.10.2
-	golang.org/x/net v0.58.0
+	golang.org/x/net v0.59.0
 )
 
 require (
